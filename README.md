@@ -11,11 +11,11 @@
 4. Process
 6. Key Findings
 7. Recommendations
-8. Final take-aways
+8. Final take-aways and future possibilities
 9. Appendices
-	a. Data Dictionary
-	b. Module Descriptions
-	c. Reproducing this project
+	1. Data Dictionary
+	2. Module Descriptions
+	3. Reproducing this project
 
 ## Introduction
 
@@ -43,10 +43,12 @@ This project explores the Telco data set to determine the variables of customer 
 ## Process
 
 #### Acquire and Prepare
+- Data is acquired from the CodeUp mySQL database using credentials stored in env.py
 - see acquire.py and prepare.py for full details on code, and acquire_prepare_notes.ipynb for more detailed notes
 - foreign key columns were dropped 
 - total_charges was cleaned and cast to float
-- perpare.py contains split_telco_data() that will split the data into train, validate and test
+	- total_charges contained 11 rows that had `' '` as a value.  These all had `tenure = 0`; because there were few rows in a large dataset, they were dropped.  Another option would be to infer `total_charges = 0`
+- prepare.py contains split_telco_data() that will split the data into train, validate and test
 
 #### Data Exploration
 - Churned customers represent 0.27 of the data
@@ -71,7 +73,7 @@ This project explores the Telco data set to determine the variables of customer 
 
 ## Recommendations
 
-## Final Takeaways
+## Final Takeaways and Future Possibilities
 
 ## Appendices
 
@@ -84,5 +86,6 @@ This project explores the Telco data set to determine the variables of customer 
 - prepare.py
 	- prep_telco(df) : Drops unnecessary columns, drops null rows in the total_charges columns, and casts the total_charges type to float
 	- split_telco_data(df) : takes the telco dataframe and returns train, validate and test dataframes
+	- telco_make_dummies(df) : makes encoded variables for all of the non-numeric data
 
 ### Reproducing this project
