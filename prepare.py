@@ -5,6 +5,8 @@ from sklearn.model_selection import train_test_split
 # imputer from sklearn
 from sklearn.impute import SimpleImputer
 
+RAND_SEED = 123
+
 def prep_telco(df):
     '''Prepares the dataframe by dropping unneeded columns, and dropping the total charges'''
     #drop foreign key columns
@@ -29,6 +31,6 @@ def telco_make_dummies(df):
 
 def split_telco_data(df):
     '''splits the telco dataframe into train, test and validate subsets'''
-    train, test = train_test_split(df, train_size = 0.8, stratify = df.churn, random_state=123)
-    train, validate = train_test_split(train, train_size = 0.7, stratify = train.churn, random_state=123)
+    train, test = train_test_split(df, train_size = 0.8, stratify = df.churn, random_state=RAND_SEED)
+    train, validate = train_test_split(train, train_size = 0.7, stratify = train.churn, random_state=RAND_SEED)
     return train, test, validate

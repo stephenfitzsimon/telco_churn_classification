@@ -1,5 +1,22 @@
 # Telco Classification Project
 
+## Quick Summary of README.md
+- Q: Who is a customer that churns? A: Someone on a month-to-month contract, with fiber optic internet, and no additional service.
+- Q: How to prevent churn? A: Many churning customers seem to have internet service that is expensive and does not meet their needs; try to save them some money by moving them to other service types or encourage them to take advantage of additional services that are offered by Telco.
+
+## Contents of README.md:
+1. Introduction
+2. Goals and Deliverables
+3. Initial Hypothesis/Questions
+4. Process
+6. Key Findings
+7. Recommendations
+8. Final take-aways
+9. Appendices
+	a. Data Dictionary
+	b. Module Descriptions
+	c. Reproducing this project
+
 ## Introduction
 
 This project explores the Telco data set to determine the variables of customer churn. It includes the full data science pipline: acquiring and cleaning the data, exploring and visualizing the data, and finally using a model to predict churn.
@@ -12,9 +29,16 @@ This project explores the Telco data set to determine the variables of customer 
 	- A report communicating the data science pipeline process
 - Deliverables
 	- This readme
-	- A final report Jupyter Notebook
+	- A final report Jupyter Notebook with clean code
 	- Python modules automating the acquire and preparation of the data
 	- A CSV of data predictions
+
+## Initial Hypothesis/Questions
+
+- I expect that contract and payment types are the most important predictors of churn
+	- People who pay more and see it every month are reminded of the money they are spending and can make a value judgement on whether or not they want to spend their money
+- Are additional services important parts of churn?
+	- Are people more reluctant to leave the company if they have certain services?
 
 ## Process
 
@@ -32,8 +56,16 @@ This project explores the Telco data set to determine the variables of customer 
 - Customers who churned sometimes did not have an additional serivce such as online backup, or device protection
 
 #### Hypothesis Testing
+- The categories with high churn are likely dependent variables
+- Churn customers likely pay more per month, and have a shorter tenure
 
-## Reproduction
+#### Models
+- The following are good candidates for models:
+	- Random Forest with a max_depth of 9 and a min_sample_leaf of 9
+	- Linear Regression with liblinear solver
+	- Decision Tree with a max_depth of 4
+	- K Nearest Neighbors with k = 17
+- Overall the best performer is the Random Forest Model
 
 ## Key Findings
 
@@ -52,3 +84,5 @@ This project explores the Telco data set to determine the variables of customer 
 - prepare.py
 	- prep_telco(df) : Drops unnecessary columns, drops null rows in the total_charges columns, and casts the total_charges type to float
 	- split_telco_data(df) : takes the telco dataframe and returns train, validate and test dataframes
+
+### Reproducing this project
