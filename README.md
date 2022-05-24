@@ -37,8 +37,7 @@ This project explores the Telco data set to determine the variables of customer 
 
 - I expect that contract and payment types are the most important predictors of churn
 	- People who pay more and see it every month are reminded of the money they are spending and can make a value judgement on whether or not they want to spend their money
-- Are additional services important parts of churn?
-	- Are people more reluctant to leave the company if they have certain services?
+- What other factors are important to churn? Are they service based factors? Are they demographic factors?
 
 ## Process
 
@@ -67,17 +66,78 @@ This project explores the Telco data set to determine the variables of customer 
 	- Linear Regression with liblinear solver
 	- Decision Tree with a max_depth of 4
 	- K Nearest Neighbors with k = 17
-- Overall the best performer is the Random Forest Model
+- Overall the best performer is the Decision tree
+- The decision tree is 
 
 ## Key Findings
+- Month-to-month contracts were a predictor of churn
+- Churned customers tend to pay more
+- A decision tree model most accurately 
 
 ## Recommendations
 
+As stated in the discussion about choosing the best model, customers churn because their willingness to pay for the service they have is lower than their monthly payment.  However, any solution must also cost below the cost to replace the customer.  Some of the following could possibly meet business needs:
+
+Easiest/immediate solutions:
+- Offer discounts to current customers who are likely to churn. These can be based on the following:
+    - Move to automatic billing, or a longer contract.
+    - Demographic discounts (senior discount).
+    - Loyalty discounts for x months with the company.
+Intermediate solutions:
+- Contact customers who are likely to churn and get them service that meets their need
+    - Some may only need DSL level service.
+    - Offer additional services (online backup, device protection, etc.) to customers who want to keep fiber optic.
+Long term solutions:
+- Partner with companies for a loyalty reward program.
+- Offer intermediate levels of service; for example, DSL with discounted extras (online backup, technical help, etc).
+
 ## Final Takeaways and Future Possibilities
+
+- High predictors of churn are the following:
+    - Fiber optic service
+    - Month-to-Month contracts
+    - Electronic check payments
+- Solutions:
+    - Offer discounts to likely-to-churn customers
+    - Offer additional services to customers
+    
+### Meeting the goals of the project
+- The three major predictors of churn were Month-to-Month contracts, Fiber Optic service, and electronic checks
+- The decision tree model is greater than $0.75$ accurate
+- This report communicates these findings
+    
+### For further research
+- This is a limited analysis, any future analysis should consider the relationship between additional services and churn (see appendix)
+- Are demographic correlated with churn factors? For example, what customers are likely to have dependents/partners? Are these more likely to have fiber optic?
 
 ## Appendices
 
 ### Data Dictionary
+
+#### Customer Identification and Demographic Data:
+- Customer ID (String)
+- Gender (Male/Female)
+- Partner status (Bool)
+- Dependent status (Bool)
+- Senior citizen status (Bool)
+
+#### Customer Relationship information:
+- Tenure in months (float)
+- Monthly charges (\$USD) (float)
+- Total charges (\$USD) (float)
+- Paperless Billing (Bool)
+- Payment type (categorical)
+- Phone Service, with service option columns:
+    - Multiple lines : One Line, Multiple Lines, No Phone Service (categorical)
+- Internet Service Type: Fiber Optic, DSL, None (categorical)
+- Internet Service Option columns (all bool):
+    - Online security
+    - Online backup
+    - Device protection
+    - Tech support
+    - Streaming TV
+    - Streaming movies
+- Churn status (bool)
 
 ### Custom Module descriptions
 
@@ -89,3 +149,5 @@ This project explores the Telco data set to determine the variables of customer 
 	- telco_make_dummies(df) : makes encoded variables for all of the non-numeric data
 
 ### Reproducing this project
+
+In order to reproduce this project download `acquire.py`, `prepare.py`, and `final_report.ipnyb`. Then make an `env.py` modeled on the above `env_example.py`.  Then run the `final_report.ipnyb` file in Jupyter Notebook.
