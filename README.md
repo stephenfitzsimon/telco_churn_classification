@@ -1,27 +1,25 @@
 # Telco Classification Project
+*Project by Stephen FitzSimon*
 
 ## Quick Summary of README.md
-- Q: Who is a customer that churns? A: Someone on a month-to-month contract, with fiber optic internet, and no additional service.
-- Q: How to prevent churn? A: Many churning customers seem to have internet service that is expensive and does not meet their needs; try to save them some money by moving them to other service types or encourage them to take advantage of additional services that are offered by Telco.
+- Q: Who is a customer that churns? A: Someone on a month-to-month contract, with fiber optic internet, and/or no additional service.
+- Q: How to prevent churn? A: Many churning customers seem to have internet service that is expensive and does not meet their needs; try to save them some money by moving them to other service types or encourage them to take advantage of additional services that are offered by Telco.  In addition, try to move people towards automatic payments.
 
 ## Contents of README.md:
-1. Introduction
-2. Goals and Deliverables
-3. Initial Hypothesis/Questions
-4. Process
-6. Key Findings
-7. Recommendations
-8. Final take-aways and future possibilities
-9. Appendices
-	1. Data Dictionary
-	2. Module Descriptions
-	3. Reproducing this project
+1. <a href='#intro'>Introduction</a>
+2. <a href='#goalsanddeliverables'>Goals and Deliverables</a>
+3. <a href='#initialhypothesis'>Initial Hypothesis/Questions</a>
+4. <a href='#process'>Process</a>
+6. <a href='#keyfindings'>Key Findings</a>
+7. <a href='#recommendations'>Recommendations</a>
+8. <a href='#finaltakeaways'>Final take-aways and future possibilities</a>
+9. <a href='#appendix'>Appendices</a>
 
-## Introduction
+## Introduction <a name='intro'></a>
 
 This project explores the Telco data set to determine the variables of customer churn. It includes the full data science pipline: acquiring and cleaning the data, exploring and visualizing the data, and finally using a model to predict churn.
 
-## Goals and Deliverables
+## Goals and Deliverables <a name='goalsanddeliverables'></a>
 
 - Goals
 	- Identify at least 3 variables that predict churn
@@ -33,13 +31,13 @@ This project explores the Telco data set to determine the variables of customer 
 	- Python modules automating the acquire and preparation of the data
 	- A CSV of data predictions
 
-## Initial Hypothesis/Questions
+## Initial Hypothesis/Questions <a name='initialhypothesis'></a>
 
 - I expect that contract and payment types are the most important predictors of churn
 	- People who pay more and see it every month are reminded of the money they are spending and can make a value judgement on whether or not they want to spend their money
 - What other factors are important to churn? Are they service based factors? Are they demographic factors?
 
-## Process
+## Process <a name='process'></a>
 
 #### Acquire and Prepare
 - Data is acquired from the CodeUp mySQL database using credentials stored in env.py
@@ -69,12 +67,12 @@ This project explores the Telco data set to determine the variables of customer 
 - Overall the best performer is the Decision tree
 - The decision tree is 
 
-## Key Findings
+## Key Findings <a name='keyfindings'></a>
 - Month-to-month contracts were a predictor of churn
 - Churned customers tend to pay more
 - A decision tree model most accurately 
 
-## Recommendations
+## Recommendations <a name='recommendations'></a>
 
 As stated in the discussion about choosing the best model, customers churn because their willingness to pay for the service they have is lower than their monthly payment.  However, any solution must also cost below the cost to replace the customer.  Some of the following could possibly meet business needs:
 
@@ -91,7 +89,7 @@ Long term solutions:
 - Partner with companies for a loyalty reward program.
 - Offer intermediate levels of service; for example, DSL with discounted extras (online backup, technical help, etc).
 
-## Final Takeaways and Future Possibilities
+## Final Takeaways and Future Possibilities <a name='finaltakeaways'></a>
 
 - High predictors of churn are the following:
     - Fiber optic service
@@ -110,7 +108,7 @@ Long term solutions:
 - This is a limited analysis, any future analysis should consider the relationship between additional services and churn (see appendix)
 - Are demographic correlated with churn factors? For example, what customers are likely to have dependents/partners? Are these more likely to have fiber optic?
 
-## Appendices
+## Appendices <a name='appendix'></a>
 
 ### Data Dictionary
 
