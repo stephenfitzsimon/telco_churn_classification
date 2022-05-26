@@ -9,7 +9,7 @@
 1. <a href='#intro'>Introduction</a>
 2. <a href='#goalsanddeliverables'>Goals and Deliverables</a>
 3. <a href='#initialhypothesis'>Initial Hypothesis/Questions</a>
-4. <a href='#process'>Process</a>
+4. <a href='#process'>Process and Planning</a>
 6. <a href='#keyfindings'>Key Findings</a>
 7. <a href='#recommendations'>Recommendations</a>
 8. <a href='#finaltakeaways'>Final take-aways and future possibilities</a>
@@ -37,7 +37,7 @@ This project explores the Telco data set to determine the variables of customer 
 	- People who pay more and see it every month are reminded of the money they are spending and can make a value judgement on whether or not they want to spend their money
 - What other factors are important to churn? Are they service based factors? Are they demographic factors?
 
-## Process <a name='process'></a>
+## Process and Planning <a name='process'></a>
 
 #### Acquire and Prepare
 - Data is acquired from the CodeUp mySQL database using credentials stored in env.py
