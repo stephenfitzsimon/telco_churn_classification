@@ -65,7 +65,7 @@ This project explores the Telco data set to determine the variables of customer 
 	- Decision Tree with a max_depth of 4
 	- K Nearest Neighbors with k = 17
 - Overall the best performer is the Decision tree
-- The decision tree is 
+- The decision tree is tested on the test data
 
 ## Key Findings <a name='keyfindings'></a>
 - Month-to-month contracts were a predictor of churn
